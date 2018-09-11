@@ -12,6 +12,7 @@ end
 target 'DonkeyFramework' do
   use_frameworks!
 
+  pod 'SwiftLint', '~> 0.27'
   target 'DonkeyFrameworkTests' do
     inherit! :search_paths
   end
