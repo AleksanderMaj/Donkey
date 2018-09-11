@@ -13,9 +13,8 @@
 		88379F1A214884FF0006D012 /* DonkeyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 88379F0A214884FE0006D012 /* DonkeyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88379F1D214884FF0006D012 /* DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; };
 		88379F1E214884FF0006D012 /* DonkeyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88379F26214888BE0006D012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A8214878E700326905 /* ViewController.swift */; };
 		88EBF9A7214878E700326905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A6214878E700326905 /* AppDelegate.swift */; };
-		88EBF9A9214878E700326905 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A8214878E700326905 /* ViewController.swift */; };
-		88EBF9AC214878E700326905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AA214878E700326905 /* Main.storyboard */; };
 		88EBF9AE214878E800326905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AD214878E800326905 /* Assets.xcassets */; };
 		88EBF9B1214878E800326905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AF214878E800326905 /* LaunchScreen.storyboard */; };
 		88EBF9BC214878E800326905 /* DonkeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9BB214878E800326905 /* DonkeyTests.swift */; };
@@ -87,7 +86,6 @@
 		88EBF9A3214878E700326905 /* Donkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBF9A6214878E700326905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EBF9A8214878E700326905 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88EBF9AB214878E700326905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88EBF9AD214878E800326905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88EBF9B0214878E800326905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88EBF9B2214878E800326905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +165,7 @@
 		88379F09214884FE0006D012 /* DonkeyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				88EBF9A8214878E700326905 /* ViewController.swift */,
 				88379F0A214884FE0006D012 /* DonkeyFramework.h */,
 				88379F0B214884FE0006D012 /* Info.plist */,
 			);
@@ -210,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				88EBF9A6214878E700326905 /* AppDelegate.swift */,
-				88EBF9A8214878E700326905 /* ViewController.swift */,
-				88EBF9AA214878E700326905 /* Main.storyboard */,
 				88EBF9AD214878E800326905 /* Assets.xcassets */,
 				88EBF9AF214878E800326905 /* LaunchScreen.storyboard */,
 				88EBF9B2214878E800326905 /* Info.plist */,
@@ -388,7 +385,6 @@
 			files = (
 				88EBF9B1214878E800326905 /* LaunchScreen.storyboard in Resources */,
 				88EBF9AE214878E800326905 /* Assets.xcassets in Resources */,
-				88EBF9AC214878E700326905 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88379F26214888BE0006D012 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +493,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EBF9A9214878E700326905 /* ViewController.swift in Sources */,
 				88EBF9A7214878E700326905 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,14 +531,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		88EBF9AA214878E700326905 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88EBF9AB214878E700326905 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88EBF9AF214878E800326905 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -772,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF370841C16B5B8112A9940F /* Pods-Donkey.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E835U7QXG;
@@ -791,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1467699AA62B6E764D956EC0 /* Pods-Donkey.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E835U7QXG;
