@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public final class ViewController: UIViewController {
 
     public override func loadView() {
@@ -17,4 +16,3 @@ public final class ViewController: UIViewController {
     }
 
 }
-
