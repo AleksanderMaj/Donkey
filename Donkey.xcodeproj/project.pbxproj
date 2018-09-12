@@ -13,11 +13,13 @@
 		88379F1A214884FF0006D012 /* DonkeyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 88379F0A214884FE0006D012 /* DonkeyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88379F1D214884FF0006D012 /* DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; };
 		88379F1E214884FF0006D012 /* DonkeyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		88379F26214888BE0006D012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A8214878E700326905 /* ViewController.swift */; };
 		88EBF9A7214878E700326905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A6214878E700326905 /* AppDelegate.swift */; };
 		88EBF9AE214878E800326905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AD214878E800326905 /* Assets.xcassets */; };
 		88EBF9B1214878E800326905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AF214878E800326905 /* LaunchScreen.storyboard */; };
 		88EBF9BC214878E800326905 /* DonkeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9BB214878E800326905 /* DonkeyTests.swift */; };
+		88FAF68721488E040084C095 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAF68521488E040084C095 /* MapViewController.swift */; };
+		88FAF68821488E040084C095 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FAF68621488E040084C095 /* MapViewController.xib */; };
+		88FAF68A21488FA00084C095 /* DonkeyWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FAF68921488FA00084C095 /* DonkeyWebservice.swift */; };
 		8CC28019F6227CC4331E5763 /* Pods_DonkeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35E45EBBAF13A2D89145732 /* Pods_DonkeyTests.framework */; };
 		96F03AF9198AB63465D283A3 /* Pods_DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533D75DB8BCB890137626E5A /* Pods_DonkeyFramework.framework */; };
 		B797305AC64DCEA39FC09C83 /* Pods_DonkeyFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482F5DFC485E04A7E7669734 /* Pods_DonkeyFrameworkTests.framework */; };
@@ -85,13 +87,15 @@
 		88379F19214884FF0006D012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EBF9A3214878E700326905 /* Donkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBF9A6214878E700326905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88EBF9A8214878E700326905 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88EBF9AD214878E800326905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88EBF9B0214878E800326905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88EBF9B2214878E800326905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EBF9B7214878E800326905 /* DonkeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBF9BB214878E800326905 /* DonkeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyTests.swift; sourceTree = "<group>"; };
 		88EBF9BD214878E800326905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FAF68521488E040084C095 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		88FAF68621488E040084C095 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		88FAF68921488FA00084C095 /* DonkeyWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyWebservice.swift; sourceTree = "<group>"; };
 		A311B6F2E474C9CE2C88204F /* Pods-DonkeyFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DonkeyFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DonkeyFrameworkTests/Pods-DonkeyFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		A35E45EBBAF13A2D89145732 /* Pods_DonkeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DonkeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF370841C16B5B8112A9940F /* Pods-Donkey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donkey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Donkey/Pods-Donkey.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,9 +169,11 @@
 		88379F09214884FE0006D012 /* DonkeyFramework */ = {
 			isa = PBXGroup;
 			children = (
-				88EBF9A8214878E700326905 /* ViewController.swift */,
 				88379F0A214884FE0006D012 /* DonkeyFramework.h */,
 				88379F0B214884FE0006D012 /* Info.plist */,
+				88FAF68921488FA00084C095 /* DonkeyWebservice.swift */,
+				88FAF68521488E040084C095 /* MapViewController.swift */,
+				88FAF68621488E040084C095 /* MapViewController.xib */,
 			);
 			path = DonkeyFramework;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				88379F0C214884FF0006D012 /* Sources */,
 				88379F0D214884FF0006D012 /* Frameworks */,
 				88379F0E214884FF0006D012 /* Resources */,
+				68DAF52BD8795D46B23C6E15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +295,7 @@
 				88EBF9A0214878E700326905 /* Frameworks */,
 				88EBF9A1214878E700326905 /* Resources */,
 				88379F24214884FF0006D012 /* Embed Frameworks */,
+				59BFB2B23FE9B9971C3E7E2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FAF68821488E040084C095 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +424,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59BFB2B23FE9B9971C3E7E2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Donkey/Pods-Donkey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Donkey/Pods-Donkey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68DAF52BD8795D46B23C6E15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DonkeyFrameworkTests/Pods-DonkeyFrameworkTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DonkeyFrameworkTests/Pods-DonkeyFrameworkTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		88FAF68221488CC90084C095 /* ShellScript */ = {
@@ -491,7 +536,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88379F26214888BE0006D012 /* ViewController.swift in Sources */,
+				88FAF68A21488FA00084C095 /* DonkeyWebservice.swift in Sources */,
+				88FAF68721488E040084C095 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

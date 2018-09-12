@@ -1,5 +1,5 @@
 import PlaygroundSupport
 import DonkeyFramework
 
-let viewController = ViewController()
-PlaygroundPage.current.liveView = viewController
+let mapVC = MapViewController()
+PlaygroundPage.current.liveView = mapVC
