@@ -13,6 +13,8 @@
 		88379F1A214884FF0006D012 /* DonkeyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 88379F0A214884FE0006D012 /* DonkeyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88379F1D214884FF0006D012 /* DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; };
 		88379F1E214884FF0006D012 /* DonkeyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		885F554B2148A9B100FEEB7C /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554A2148A9B100FEEB7C /* Hub.swift */; };
+		885F554D2148AC2400FEEB7C /* DonkeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554C2148AC2400FEEB7C /* DonkeyType.swift */; };
 		88EBF9A7214878E700326905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A6214878E700326905 /* AppDelegate.swift */; };
 		88EBF9AE214878E800326905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AD214878E800326905 /* Assets.xcassets */; };
 		88EBF9B1214878E800326905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AF214878E800326905 /* LaunchScreen.storyboard */; };
@@ -85,6 +87,8 @@
 		88379F10214884FF0006D012 /* DonkeyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkeyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88379F17214884FF0006D012 /* DonkeyFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyFrameworkTests.swift; sourceTree = "<group>"; };
 		88379F19214884FF0006D012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885F554A2148A9B100FEEB7C /* Hub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
+		885F554C2148AC2400FEEB7C /* DonkeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyType.swift; sourceTree = "<group>"; };
 		88EBF9A3214878E700326905 /* Donkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBF9A6214878E700326905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EBF9AD214878E800326905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				88FAF68921488FA00084C095 /* DonkeyWebservice.swift */,
 				88FAF68521488E040084C095 /* MapViewController.swift */,
 				88FAF68621488E040084C095 /* MapViewController.xib */,
+				885F554A2148A9B100FEEB7C /* Hub.swift */,
+				885F554C2148AC2400FEEB7C /* DonkeyType.swift */,
 			);
 			path = DonkeyFramework;
 			sourceTree = "<group>";
@@ -538,6 +544,8 @@
 			files = (
 				88FAF68A21488FA00084C095 /* DonkeyWebservice.swift in Sources */,
 				88FAF68721488E040084C095 /* MapViewController.swift in Sources */,
+				885F554B2148A9B100FEEB7C /* Hub.swift in Sources */,
+				885F554D2148AC2400FEEB7C /* DonkeyType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
