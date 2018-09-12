@@ -13,8 +13,13 @@
 		88379F1A214884FF0006D012 /* DonkeyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 88379F0A214884FE0006D012 /* DonkeyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88379F1D214884FF0006D012 /* DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; };
 		88379F1E214884FF0006D012 /* DonkeyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		884640982149C33100FD908F /* MapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884640972149C33100FD908F /* MapKitExtensions.swift */; };
 		885F554B2148A9B100FEEB7C /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554A2148A9B100FEEB7C /* Hub.swift */; };
 		885F554D2148AC2400FEEB7C /* DonkeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554C2148AC2400FEEB7C /* DonkeyType.swift */; };
+		88B23F62214977FF00840ED6 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B23F61214977FF00840ED6 /* Area.swift */; };
+		88B23F6421498AC300840ED6 /* HubsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B23F6321498AC300840ED6 /* HubsRouter.swift */; };
+		88B23F662149909E00840ED6 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B23F652149909E00840ED6 /* MapViewModel.swift */; };
+		88B23F7821499F5F00840ED6 /* HubAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B23F7721499F5F00840ED6 /* HubAnnotation.swift */; };
 		88EBF9A7214878E700326905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBF9A6214878E700326905 /* AppDelegate.swift */; };
 		88EBF9AE214878E800326905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AD214878E800326905 /* Assets.xcassets */; };
 		88EBF9B1214878E800326905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EBF9AF214878E800326905 /* LaunchScreen.storyboard */; };
@@ -87,8 +92,13 @@
 		88379F10214884FF0006D012 /* DonkeyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkeyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88379F17214884FF0006D012 /* DonkeyFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyFrameworkTests.swift; sourceTree = "<group>"; };
 		88379F19214884FF0006D012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884640972149C33100FD908F /* MapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitExtensions.swift; sourceTree = "<group>"; };
 		885F554A2148A9B100FEEB7C /* Hub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
 		885F554C2148AC2400FEEB7C /* DonkeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyType.swift; sourceTree = "<group>"; };
+		88B23F61214977FF00840ED6 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		88B23F6321498AC300840ED6 /* HubsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubsRouter.swift; sourceTree = "<group>"; };
+		88B23F652149909E00840ED6 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		88B23F7721499F5F00840ED6 /* HubAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubAnnotation.swift; sourceTree = "<group>"; };
 		88EBF9A3214878E700326905 /* Donkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EBF9A6214878E700326905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EBF9AD214878E800326905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,11 +185,11 @@
 			children = (
 				88379F0A214884FE0006D012 /* DonkeyFramework.h */,
 				88379F0B214884FE0006D012 /* Info.plist */,
-				88FAF68921488FA00084C095 /* DonkeyWebservice.swift */,
-				88FAF68521488E040084C095 /* MapViewController.swift */,
-				88FAF68621488E040084C095 /* MapViewController.xib */,
-				885F554A2148A9B100FEEB7C /* Hub.swift */,
-				885F554C2148AC2400FEEB7C /* DonkeyType.swift */,
+				88B23F672149918C00840ED6 /* Networking */,
+				8846409A2149C36B00FD908F /* ViewModel */,
+				8846409B2149C37C00FD908F /* View */,
+				88B23F68214991A100840ED6 /* Entities */,
+				884640992149C35500FD908F /* Utils */,
 			);
 			path = DonkeyFramework;
 			sourceTree = "<group>";
@@ -191,6 +201,51 @@
 				88379F19214884FF0006D012 /* Info.plist */,
 			);
 			path = DonkeyFrameworkTests;
+			sourceTree = "<group>";
+		};
+		884640992149C35500FD908F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				884640972149C33100FD908F /* MapKitExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8846409A2149C36B00FD908F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88B23F652149909E00840ED6 /* MapViewModel.swift */,
+				88B23F7721499F5F00840ED6 /* HubAnnotation.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8846409B2149C37C00FD908F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88FAF68521488E040084C095 /* MapViewController.swift */,
+				88FAF68621488E040084C095 /* MapViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88B23F672149918C00840ED6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				88FAF68921488FA00084C095 /* DonkeyWebservice.swift */,
+				88B23F6321498AC300840ED6 /* HubsRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		88B23F68214991A100840ED6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				885F554A2148A9B100FEEB7C /* Hub.swift */,
+				88B23F61214977FF00840ED6 /* Area.swift */,
+				885F554C2148AC2400FEEB7C /* DonkeyType.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		88EBF99A214878E700326905 = {
@@ -542,10 +597,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B23F7821499F5F00840ED6 /* HubAnnotation.swift in Sources */,
+				88B23F6421498AC300840ED6 /* HubsRouter.swift in Sources */,
+				88B23F62214977FF00840ED6 /* Area.swift in Sources */,
+				88B23F662149909E00840ED6 /* MapViewModel.swift in Sources */,
 				88FAF68A21488FA00084C095 /* DonkeyWebservice.swift in Sources */,
 				88FAF68721488E040084C095 /* MapViewController.swift in Sources */,
 				885F554B2148A9B100FEEB7C /* Hub.swift in Sources */,
 				885F554D2148AC2400FEEB7C /* DonkeyType.swift in Sources */,
+				884640982149C33100FD908F /* MapKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

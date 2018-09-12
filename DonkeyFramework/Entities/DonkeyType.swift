@@ -14,6 +14,11 @@ extension DonkeyType {
         encoder.keyEncodingStrategy = .convertToSnakeCase
         return try encoder.encode(self)
     }
+
+    func params() throws -> [String: String] {
+        let params = try JSONDecoder().decode([String: String].self, from: encode())
+        return params
+    }
 }
 
 // Make the Array type conditionally conform to DonkeyType
@@ -24,4 +29,3 @@ extension Array: DonkeyType where Element: DonkeyType {
         return try decoder.decode(Array.self, from: data)
     }
 }
-

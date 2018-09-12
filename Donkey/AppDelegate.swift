@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window.rootViewController = MapViewController()
+        window.rootViewController = MapViewController(viewModel: MapViewModel())
         window.makeKeyAndVisible()
         return true
     }
