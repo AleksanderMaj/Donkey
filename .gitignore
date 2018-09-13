@@ -33,4 +33,4 @@ timeline.xctimeline
 playground.xcworkspace
 
 # CocoaPods
-Pods/
+#Pods/
