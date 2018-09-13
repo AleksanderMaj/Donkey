@@ -7,11 +7,12 @@ public struct Hub: DonkeyType {
     public let latitude: String
     public let longitude: String
     public let radius: Int
-    public let thumbnailUrl: String
-    public let availableBikesCount: Int
-    public let countryCode: String
-    public let currency: String
-    public let prices: [String: Int]
+    private var availableBikesCount: Int?
+    private var bikesCount: Int?
+
+    func bikeCount() -> Int {
+        return availableBikesCount ?? bikesCount ?? 0
+    }
 }
 
 extension Hub: Equatable {

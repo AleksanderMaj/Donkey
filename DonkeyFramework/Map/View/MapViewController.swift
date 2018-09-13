@@ -4,6 +4,7 @@ import MapKit
 public protocol MapViewType: class {
     func remove(hubAnnotations: [MKAnnotation])
     func add(hubAnnotations: [MKAnnotation])
+    func show(hubAnnotations: [MKAnnotation])
 }
 
 public final class MapViewController: UIViewController {
@@ -29,6 +30,11 @@ public final class MapViewController: UIViewController {
         handleAreaChange()
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     private func setUp() {
         mapView.delegate = self
     }
@@ -36,6 +42,10 @@ public final class MapViewController: UIViewController {
     fileprivate func handleAreaChange() {
         let area = Area(location: mapView.centerCoordinate, radius: mapView.radius)
         viewModel.areaDidChange(area: area)
+    }
+
+    @IBAction func showSearch(_ sender: UIButton) {
+        viewModel.didTapSearch()
     }
 }
 
@@ -47,6 +57,10 @@ extension MapViewController: MapViewType {
     public func add(hubAnnotations: [MKAnnotation]) {
         mapView.addAnnotations(hubAnnotations)
         print("TOTAL: \(mapView.annotations.count)")
+    }
+
+    public func show(hubAnnotations: [MKAnnotation]) {
+        mapView.showAnnotations(hubAnnotations, animated: true)
     }
 }
 

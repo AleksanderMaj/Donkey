@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-public struct Area: DonkeyType {
+public struct Area {
     init(location: CLLocationCoordinate2D, radius: Double) {
         self.location = "\(location.latitude),\(location.longitude)"
         self.radius = Int(radius)

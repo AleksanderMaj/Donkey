@@ -19,7 +19,7 @@ public class HubAnnotation: NSObject, MKAnnotation {
     }
 
     private func updateInfo() {
-        title = "\(hub.availableBikesCount)"
+        title = "\(hub.bikeCount())"
         subtitle = hub.name
     }
 }

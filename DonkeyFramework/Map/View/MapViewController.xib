@@ -24,12 +24,26 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ufe-u1-BWc">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P69-FB-67K">
+                    <rect key="frame" x="16" y="607" width="343" height="44"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Di2-D2-DOw"/>
+                    </constraints>
+                    <state key="normal" title="Search"/>
+                    <connections>
+                        <action selector="showSearch:" destination="-1" eventType="touchUpInside" id="VVX-Hs-pZ0"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Ufe-u1-BWc" secondAttribute="bottom" id="3a1-ZI-E6A"/>
                 <constraint firstItem="Ufe-u1-BWc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wko-qx-FZf"/>
+                <constraint firstItem="P69-FB-67K" firstAttribute="centerX" secondItem="Ufe-u1-BWc" secondAttribute="centerX" id="XpV-2c-TtR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="P69-FB-67K" secondAttribute="bottom" constant="16" id="atV-8f-aqp"/>
                 <constraint firstAttribute="trailing" secondItem="Ufe-u1-BWc" secondAttribute="trailing" id="cQ5-Tn-M2f"/>
+                <constraint firstItem="P69-FB-67K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="k9U-CN-2Gk"/>
                 <constraint firstItem="Ufe-u1-BWc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tel-Vx-Qkr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -13,11 +13,11 @@ import DonkeyFramework
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow()
+    lazy var mapCoordinator = MapCoordinator()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window.rootViewController = MapViewController(viewModel: MapViewModel())
-        window.makeKeyAndVisible()
+        mapCoordinator.start(in: window)
         return true
     }
 
