@@ -24,7 +24,7 @@ private func fetchHubs(in area: Area, onComplete: @escaping (DonkeyResult<[Hub]>
     Alamofire
         .request(HubsRouter.getHubs(in: area))
         .validate(statusCode: 200...299)
-        .responseData(completionHandler: { (response) in
+        .responseData(queue: DispatchQueue.global(qos: .userInitiated), completionHandler: { (response) in
             handleResponse(response: response, onComplete: onComplete)
         })
 }
@@ -34,7 +34,7 @@ private func searchHubs(query: String, onComplete: @escaping (DonkeyResult<[Hub]
     Alamofire
         .request(HubsRouter.search(query: query, adminId: adminId))
         .validate(statusCode: 200...299)
-        .responseData(completionHandler: { (response) in
+        .responseData(queue: DispatchQueue.global(qos: .userInitiated), completionHandler: { (response) in
             handleResponse(response: response, onComplete: onComplete)
         })
 }

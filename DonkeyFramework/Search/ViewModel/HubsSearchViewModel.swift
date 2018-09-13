@@ -35,6 +35,8 @@ class HubsSearchViewModel: HubsSearchViewModelInput {
 
     private func handleSearchResults(_ hubs: [Hub]) {
         self.hubs = hubs
-        view?.showResults(hubs.map { $0.name })
+        DispatchQueue.main.async {
+            self.view?.showResults(hubs.map { $0.name })
+        }
     }
 }

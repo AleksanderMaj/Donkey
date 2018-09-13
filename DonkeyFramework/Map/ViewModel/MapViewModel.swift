@@ -27,12 +27,16 @@ public class MapViewModel {
     fileprivate func insertHubs(_ newHubs: Set<Hub>) {
         let newAnnotations = newHubs.compactMap { HubAnnotation(hub: $0) }
         newAnnotations.forEach { hubMap[$0.hub] = $0 }
-        view?.add(hubAnnotations: newAnnotations)
+        DispatchQueue.main.async {
+            self.view?.add(hubAnnotations: newAnnotations)
+        }
     }
 
     fileprivate func removeHubs(_ oldHubs: Set<Hub>) {
         let offscreenAnnotations = oldHubs.compactMap { hubMap.removeValue(forKey: $0) }
-        view?.remove(hubAnnotations: offscreenAnnotations)
+        DispatchQueue.main.async {
+            self.view?.remove(hubAnnotations: offscreenAnnotations)
+        }
     }
 }
 
