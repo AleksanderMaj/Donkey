@@ -4,7 +4,7 @@ import MapKit
 public protocol MapViewType: class {
     func remove(hubAnnotations: [MKAnnotation])
     func add(hubAnnotations: [MKAnnotation])
-    func show(hubAnnotations: [MKAnnotation])
+    func show(hubAnnotation: MKAnnotation)
 }
 
 public final class MapViewController: UIViewController {
@@ -59,8 +59,9 @@ extension MapViewController: MapViewType {
         print("TOTAL: \(mapView.annotations.count)")
     }
 
-    public func show(hubAnnotations: [MKAnnotation]) {
-        mapView.showAnnotations(hubAnnotations, animated: true)
+    public func show(hubAnnotation: MKAnnotation) {
+        mapView.showAnnotations([hubAnnotation], animated: false)
+        mapView.selectAnnotation(hubAnnotation, animated: true)
     }
 }
 

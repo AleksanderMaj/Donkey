@@ -7,15 +7,25 @@ protocol HubsSearchViewModelInput {
 }
 
 class HubsSearchViewModel: HubsSearchViewModelInput {
-    weak var coordinator: MapCoordinator?
+    weak var coordinator: AppCoordinator?
     weak var view: HubSearchViewType?
+    private var throttleTimer: Timer?
 
     var hubs = [Hub]()
 
     func search(query: String) {
-        DonkeyWebservice().searchHubs(query: query) { [weak self] (hubs) in
-            self?.handleSearchResults(hubs)
-        }
+        throttleTimer?.invalidate()
+        throttleTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { [weak self] _ in
+            Current.webservice.searchHubs(query) { [weak self] (result) in
+                switch result {
+                case let .success(results):
+                    self?.handleSearchResults(results)
+                case .failure:
+                    // Display error to the user
+                    break
+                }
+            }
+        })
     }
 
     func didSelectItem(atIndex index: Int) {
@@ -25,6 +35,6 @@ class HubsSearchViewModel: HubsSearchViewModelInput {
 
     private func handleSearchResults(_ hubs: [Hub]) {
         self.hubs = hubs
-        view?.showResults(hubs.map { $0.name }) 
+        view?.showResults(hubs.map { $0.name })
     }
 }

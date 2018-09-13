@@ -1,35 +1,58 @@
 import Foundation
 import Alamofire
 
+public enum Result<A, E> {
+    case success(A)
+    case failure(E)
+}
+
+public enum DonkeyError: Error {
+    case noData
+}
+
+public typealias DonkeyResult<A> = Result<A, Error>
+
 public class DonkeyWebservice {
     public init() {}
 
-    private let adminId = "878"
+    public var fetchHubs = fetchHubs(in:onComplete:)
+    public var searchHubs = searchHubs(query:onComplete:)
 
-    public func fetchHubs(in area: Area, onComplete: @escaping ([Hub]) -> Void) {
-        Alamofire
-            .request(HubsRouter.getHubs(in: area))
-            .responseData(completionHandler: { (response) in
-                guard let data = response.data else { return }
-                do {
-                    onComplete(try [Hub].decode(data: data))
-                } catch {
-                    print(error.localizedDescription)
-                }
-            })
+}
+
+private func fetchHubs(in area: Area, onComplete: @escaping (DonkeyResult<[Hub]>) -> Void) {
+    Alamofire
+        .request(HubsRouter.getHubs(in: area))
+        .validate(statusCode: 200...299)
+        .responseData(completionHandler: { (response) in
+            handleResponse(response: response, onComplete: onComplete)
+        })
+}
+
+private func searchHubs(query: String, onComplete: @escaping (DonkeyResult<[Hub]>) -> Void) {
+    let adminId = "878"
+    Alamofire
+        .request(HubsRouter.search(query: query, adminId: adminId))
+        .validate(statusCode: 200...299)
+        .responseData(completionHandler: { (response) in
+            handleResponse(response: response, onComplete: onComplete)
+        })
+}
+
+private func handleResponse<A: DonkeyType>(response: DataResponse<Data>,
+                                           onComplete: (DonkeyResult<[A]>) -> Void) {
+    if let error = response.error {
+        onComplete(.failure(error))
+        return
     }
-
-    public func searchHubs(query: String, onComplete: @escaping ([Hub]) -> Void) {
-        Alamofire
-            .request(HubsRouter.search(query: query, adminId: adminId))
-            .responseData(completionHandler: { (response) in
-                guard let data = response.data else { return }
-                String(data: data, encoding: .utf8).flatMap { print($0) }
-                do {
-                    onComplete(try [Hub].decode(data: data))
-                } catch {
-                    print(error.localizedDescription)
-                }
-            })
+    guard let data = response.data else {
+        onComplete(.failure(DonkeyError.noData))
+        return
+    }
+    do {
+        onComplete(.success(try [A].decode(data: data)))
+    } catch {
+        print(error.localizedDescription)
+        onComplete(.failure(error))
     }
 }

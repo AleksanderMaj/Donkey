@@ -13,7 +13,7 @@ import DonkeyFramework
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow()
-    lazy var mapCoordinator = MapCoordinator()
+    lazy var mapCoordinator = AppCoordinator()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

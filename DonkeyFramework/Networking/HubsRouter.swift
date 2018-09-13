@@ -41,8 +41,8 @@ enum HubsRouter: URLRequestConvertible {
         switch self {
         case let .getHubs(in: area):
             return area.toParams()
-        case let .search(query, adminId):
-            return ["admin_id": adminId, "query": query]
+        case let .search(query, _):
+            return ["query": query]
         }
     }
 }

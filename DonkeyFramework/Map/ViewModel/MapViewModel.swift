@@ -9,7 +9,7 @@ public protocol MapViewModelInput {
 
 public class MapViewModel {
     public weak var view: MapViewType?
-    weak var coordinator: MapCoordinator?
+    weak var coordinator: AppCoordinator?
 
     var hubMap = [Hub: HubAnnotation]()
 
@@ -40,8 +40,14 @@ extension MapViewModel: MapViewModelInput {
     public func viewDidLoad() {}
 
     public func areaDidChange(area: Area) {
-        DonkeyWebservice().fetchHubs(in: area) { [weak self] (fetchedHubs) in
-            self?.handle(fetchedHubs: Set(fetchedHubs))
+        Current.webservice.fetchHubs(area) { [weak self] (result) in
+            switch result {
+            case let .success(hubs):
+                self?.handle(fetchedHubs: Set(hubs))
+            case .failure:
+                break
+                // Show alert to the user
+            }
         }
     }
 
@@ -57,6 +63,6 @@ extension MapViewModel: MapInterface {
         handle(fetchedHubs: Set([hub]))
 
         guard let annotation = hubMap[hub] else { return }
-        view?.show(hubAnnotations: [annotation])
+        view?.show(hubAnnotation: annotation)
     }
 }

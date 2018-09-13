@@ -1,6 +1,9 @@
 import Foundation
 
-public final class MapCoordinator {
+//swiftlint:disable:next identifier_name
+public var Current = Environment()
+
+public final class AppCoordinator {
     weak var rootNC: UINavigationController?
     weak var map: MapInterface?
 

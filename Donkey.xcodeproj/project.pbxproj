@@ -13,11 +13,12 @@
 		88379F1A214884FF0006D012 /* DonkeyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 88379F0A214884FE0006D012 /* DonkeyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88379F1D214884FF0006D012 /* DonkeyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; };
 		88379F1E214884FF0006D012 /* DonkeyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88379F08214884FE0006D012 /* DonkeyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		883822A62149DFBE0094B310 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822A52149DFBE0094B310 /* MapCoordinator.swift */; };
+		883822A62149DFBE0094B310 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822A52149DFBE0094B310 /* AppCoordinator.swift */; };
 		883822AA2149E2DA0094B310 /* HubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822A82149E2DA0094B310 /* HubSearchViewController.swift */; };
 		883822AB2149E2DA0094B310 /* HubSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883822A92149E2DA0094B310 /* HubSearchViewController.xib */; };
 		883822AD214A33E90094B310 /* HubsSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822AC214A33E90094B310 /* HubsSearchViewModel.swift */; };
 		883822BF214A3AFF0094B310 /* MapInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822BE214A3AFF0094B310 /* MapInterface.swift */; };
+		883822C2214A4D540094B310 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883822C1214A4D540094B310 /* Environment.swift */; };
 		884640982149C33100FD908F /* MapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884640972149C33100FD908F /* MapKitExtensions.swift */; };
 		885F554B2148A9B100FEEB7C /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554A2148A9B100FEEB7C /* Hub.swift */; };
 		885F554D2148AC2400FEEB7C /* DonkeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F554C2148AC2400FEEB7C /* DonkeyType.swift */; };
@@ -97,11 +98,12 @@
 		88379F10214884FF0006D012 /* DonkeyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkeyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88379F17214884FF0006D012 /* DonkeyFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyFrameworkTests.swift; sourceTree = "<group>"; };
 		88379F19214884FF0006D012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		883822A52149DFBE0094B310 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		883822A52149DFBE0094B310 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		883822A82149E2DA0094B310 /* HubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubSearchViewController.swift; sourceTree = "<group>"; };
 		883822A92149E2DA0094B310 /* HubSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HubSearchViewController.xib; sourceTree = "<group>"; };
 		883822AC214A33E90094B310 /* HubsSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubsSearchViewModel.swift; sourceTree = "<group>"; };
 		883822BE214A3AFF0094B310 /* MapInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInterface.swift; sourceTree = "<group>"; };
+		883822C1214A4D540094B310 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		884640972149C33100FD908F /* MapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitExtensions.swift; sourceTree = "<group>"; };
 		885F554A2148A9B100FEEB7C /* Hub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
 		885F554C2148AC2400FEEB7C /* DonkeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyType.swift; sourceTree = "<group>"; };
@@ -195,11 +197,13 @@
 			children = (
 				88379F0A214884FE0006D012 /* DonkeyFramework.h */,
 				88379F0B214884FE0006D012 /* Info.plist */,
+				883822C0214A49650094B310 /* Coordintator */,
 				883822A42149DF960094B310 /* Map */,
 				883822A72149E12D0094B310 /* Search */,
 				88B23F672149918C00840ED6 /* Networking */,
 				88B23F68214991A100840ED6 /* Entities */,
 				884640992149C35500FD908F /* Utils */,
+				883822C1214A4D540094B310 /* Environment.swift */,
 			);
 			path = DonkeyFramework;
 			sourceTree = "<group>";
@@ -217,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				883822BE214A3AFF0094B310 /* MapInterface.swift */,
-				883822A52149DFBE0094B310 /* MapCoordinator.swift */,
 				8846409A2149C36B00FD908F /* ViewModel */,
 				8846409B2149C37C00FD908F /* View */,
 			);
@@ -248,6 +251,14 @@
 				883822AC214A33E90094B310 /* HubsSearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		883822C0214A49650094B310 /* Coordintator */ = {
+			isa = PBXGroup;
+			children = (
+				883822A52149DFBE0094B310 /* AppCoordinator.swift */,
+			);
+			path = Coordintator;
 			sourceTree = "<group>";
 		};
 		884640992149C35500FD908F /* Utils */ = {
@@ -648,8 +659,9 @@
 				88B23F7821499F5F00840ED6 /* HubAnnotation.swift in Sources */,
 				88B23F6421498AC300840ED6 /* HubsRouter.swift in Sources */,
 				883822BF214A3AFF0094B310 /* MapInterface.swift in Sources */,
+				883822C2214A4D540094B310 /* Environment.swift in Sources */,
 				88B23F62214977FF00840ED6 /* Area.swift in Sources */,
-				883822A62149DFBE0094B310 /* MapCoordinator.swift in Sources */,
+				883822A62149DFBE0094B310 /* AppCoordinator.swift in Sources */,
 				88B23F662149909E00840ED6 /* MapViewModel.swift in Sources */,
 				883822AA2149E2DA0094B310 /* HubSearchViewController.swift in Sources */,
 				88FAF68A21488FA00084C095 /* DonkeyWebservice.swift in Sources */,
